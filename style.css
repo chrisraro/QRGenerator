@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #0d1117;
+    color: #c9d1d9;
+    transition: background 0.3s, color 0.3s;
+    position: relative;
+}
+.light-mode {
+    background: #f0f0f0;
+    color: #333;
+}
+.container {
+    background: #161b22;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    width: 500px;
+    text-align: center;
+    transform: scale(0.95);
+    transition: transform 0.3s ease-in-out;
+}
+.container:hover {
+    transform: scale(1);
+}
+.light-mode .container {
+    background: #ffffff;
+}
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #D71921;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, transform 0.3s;
+}
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+.light-mode .theme-toggle {
+    background: #1B1B1D;
+}
+h2 {
+    font-family: monospace;
+    margin-bottom: 25px;
+    color: #ffffff;
+    transition: color 0.3s;
+}
+.light-mode h2 {
+    color: #333;
+}
+.input-field {
+    font-family: monospace;
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background: #222;
+    color: white;
+    outline: none;
+    transition: background 0.3s;
+    text-align: center;
+}
+.light-mode .input-field {
+    background: #ddd;
+    color: black;
+}
+.generate-button {
+    font-family: monospace;
+    margin-top: 15px;
+    padding: 12px 20px;
+    font-size: 18px;
+    background: #D71921;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.generate-button:hover {
+    background: #e64a19;
+}
+.qr-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
