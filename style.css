@@ -96,6 +96,25 @@ h2 {
     cursor: pointer;
     transition: background 0.3s;
 }
+.download-btn {
+    display: none;
+    font-family: monospace;
+    margin-top: 15px;
+    padding: 12px 20px;
+    font-size: 18px;
+    background: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.light-mode .generate-button {
+    background: #1B1B1D;
+}
+.light-mode .download-btn {
+    background: #D71921;
+}
 .generate-button:hover {
     background: #e64a19;
 }
@@ -103,4 +122,9 @@ h2 {
     margin-top: 20px;
     display: flex;
     justify-content: center;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
 }
