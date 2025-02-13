@@ -32,5 +32,3 @@ cd QRGenerator
 
 
 ---
-
-Feel free to adjust this `README.md` to better suit your project details or to add any additional information.
