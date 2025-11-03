@@ -5,19 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code Generator</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <button class="theme-toggle" id="theme-toggle">🌙</button>
     <div class="container">
         <h2>QR Code Generator</h2>
+        
+        <!-- Input Type Selection -->
+        <div class="input-type-selector">
+            <label for="input-type">QR Code Type:</label>
+            <select id="input-type" class="input-field">
+                <option value="text">Text/URL</option>
+                <option value="contact">Contact</option>
+                <option value="wifi">WiFi</option>
+                <option value="email">Email</option>
+                <option value="sms">SMS</option>
+                <option value="phone">Phone</option>
+            </select>
+        </div>
+        
+        <!-- Main input field -->
         <input type="text" id="text-input" class="input-field" placeholder="Enter a text or paste a link here">
+        
+        <!-- Contact info fields (hidden by default) -->
+        <div id="contact-fields" class="contact-fields" style="display: none;">
+            <input type="text" id="contact-name" class="input-field" placeholder="Name">
+            <input type="text" id="contact-phone" class="input-field" placeholder="Phone">
+            <input type="email" id="contact-email" class="input-field" placeholder="Email">
+            <input type="text" id="contact-org" class="input-field" placeholder="Organization">
+        </div>
+        
+        <!-- WiFi fields (hidden by default) -->
+        <div id="wifi-fields" class="wifi-fields" style="display: none;">
+            <input type="text" id="wifi-ssid" class="input-field" placeholder="Network Name (SSID)">
+            <input type="password" id="wifi-password" class="input-field" placeholder="Password">
+            <select id="wifi-security" class="input-field">
+                <option value="WPA">WPA/WPA2</option>
+                <option value="WEP">WEP</option>
+                <option value="nopass">No Password</option>
+            </select>
+        </div>
+        
+        <!-- Customization options -->
+        <div class="customization-options">
+            <h3>Customization Options</h3>
+            <div class="option-group">
+                <label for="qr-size">QR Size:</label>
+                <input type="range" id="qr-size" min="100" max="400" value="200">
+                <span id="qr-size-value">200px</span>
+            </div>
+            <div class="option-group">
+                <label for="fg-color">Foreground Color:</label>
+                <input type="color" id="fg-color" value="#000000">
+            </div>
+            <div class="option-group">
+                <label for="bg-color">Background Color:</label>
+                <input type="color" id="bg-color" value="#ffffff">
+            </div>
+            <div class="option-group">
+                <label for="logo-upload">Add Logo:</label>
+                <input type="file" id="logo-upload" accept="image/*">
+            </div>
+        </div>
+        
         <button class="generate-button" id="generate-button">Generate QR Code</button>
+        
+        <!-- QR Code container -->
         <div class="qr-container" id="qr-container"></div>
+        
+        <!-- Download and format options -->
         <div class="button-container">
+            <select id="download-format" class="input-field download-option">
+                <option value="png">PNG</option>
+                <option value="jpg">JPG</option>
+                <option value="svg">SVG</option>
+            </select>
             <button class="download-btn" id="download-btn">Save QR</button>
         </div>
+        
+        <!-- Scanner button -->
+        <button class="scanner-button" id="scanner-button">Scan QR Code</button>
+        
+        <!-- QR Scanner container (hidden by default) -->
+        <div id="qr-reader" style="display: none; margin-top: 20px;">
+            <div id="qr-reader-results"></div>
+        </div>
     </div>
-    <script src="generateQr.js"> </script>
+    
+    <footer>
+        <p>©2025 Christian Raro. All rights reserved.</p>
+    </footer>
+    <script src="generateQr.js"></script>
 </body>
 </html>
