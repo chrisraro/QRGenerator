@@ -1,34 +1,62 @@
-# QR Code Generator
+# Advanced QR Code Generator
 
-A simple web-based QR Code generator project that allows users to generate a QR code from a predefined URL or text, and download the generated QR code image. The download button only appears once a QR code has been generated.
-
-## Demo
-
-Check out the live demo: [QR Code Generator](https://chrisraro.github.io/QRGenerator/)
+A feature-rich QR code generator with customization options, multiple input types, and scanning capabilities.
 
 ## Features
 
-- **QR Code Generation**: Quickly generate a QR code for a given URL or text.
-- **Download Functionality**: Download the generated QR code as a PNG image.
-- **Dynamic UI**: The download button is hidden until a QR code is generated.
-- **Customizable**: Easily update the QR code content, size, and styling as needed.
+- Generate QR codes for different content types:
+  - Text/URL
+  - Contact information (vCard)
+  - WiFi credentials
+  - Email addresses
+  - SMS messages
+  - Phone numbers
+- Customize QR code appearance:
+  - Size adjustment
+  - Foreground and background colors
+  - Add logos to QR codes
+- Download in multiple formats:
+  - PNG
+  - JPG
+  - SVG
+- Built-in QR code scanner
+- Dark/Light theme toggle
+- Responsive design
+
+## Usage
+
+1. Open `index.html` in your browser
+2. Select the type of QR code you want to generate
+3. Enter the required information
+4. Customize appearance if desired
+5. Click "Generate QR Code"
+6. Download the QR code in your preferred format
+
+## Deployment to GitHub Pages
+
+1. Fork this repository or create your own
+2. Push the code to the `main` branch (or set the default branch)
+3. Go to repository Settings → Pages
+4. Select "Deploy from a branch"
+5. Choose "main" branch and "/" folder
+6. Click "Save"
+7. Your site will be available at `https://<username>.github.io/<repository-name>`
 
 ## Technologies Used
 
-- **HTML5** for the project structure.
-- **CSS3** for styling.
-- **JavaScript** for generating the QR code and managing the download functionality.
-- **[QRCode.js](https://davidshimjs.github.io/qrcodejs/)** (or a similar library) to render the QR code.
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- [qrcode.js](https://github.com/davidshimjs/qrcodejs) - QR code generation
+- [html5-qrcode](https://github.com/mebjas/html5-qrcode) - QR code scanning
 
-## Installation
+## Browser Compatibility
 
-1. **Clone the repository:**
+The application works on all modern browsers that support:
+- HTML5 Canvas
+- File API
+- MediaDevices API (for QR scanning)
 
-   ```bash
-   git clone https://github.com/chrisraro/QRGenerator.git
+## License
 
-2. Navigate into the project directory:
-cd QRGenerator
-
-
----
+MIT License
